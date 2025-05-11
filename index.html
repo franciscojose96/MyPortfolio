@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Rodrigues | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a class="menu-link" href="#inicio">Início</a></li>
+            <li><a class="menu-link" href="#sobre">Sobre</a></li>
+            <li><a class="menu-link" href="#projetos">Projetos</a></li>
+            <li><a class="menu-link" href="#contatos">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img class="foto-perfil" src="/img/perfil.jpeg" alt="foto perfil Francisco">
+        <div class="div-main">
+            <h1>Francisco Rodrigues</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Front-End</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Este é meu portfólio profissional, onde apresento projetos que desenvolvi ou participei na área de Tecnologia da Informação.O objetivo deste portfólio é demonstrar minhas habilidades práticas em desenvolvimento web, automações e suporte técnico, além de destacar minha evolução contínua como profissional de TI.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/01.png" alt="Projeto 1">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Sistema de marcação de exames</h3>
+                    <p class="paragrafo-projetos">Sistema criado para realizar agendamentos online, gerenciar exames marcados, realizar pagamentos e fornecer relatórios de desempenho.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/02.png" alt="Projeto 2">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">E-commerce Digital Collage (Educacional)</h3>
+                    <p class="paragrafo-projetos">Site de E-commerce Digital Collage, uma loja virtual que vende uma variedade de produtos.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/03.jpeg" alt="Projeto 3">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site institucional Medeiros Supermercado</h3>
+                    <p class="paragrafo-projetos">Site institucional que serve para falar sobre nossas lojas, divulgar ações, vagas de emprego, promoções, localização das lojas e etc.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/05.png" alt="Projeto 4">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site institucional (Educacional)</h3>
+                    <p class="paragrafo-projetos">Site institucional da Hashtag treinamentos. Primeiro projeto feito na trajetória de Desenvolvedor. Cópia do site da plataforma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contatos" id="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsapp(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-form">Enviar</button>
+        </form>
+    </section>
+
+   <script src="./script.js"></script>
+</body>
+</html>

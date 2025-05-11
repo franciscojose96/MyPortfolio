@@ -66,6 +66,13 @@ body {
 
 /* main */
 
+.div-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 .cabecalho {
     min-height: 100vh;
     display: flex;
@@ -75,6 +82,8 @@ body {
 }
 
 .foto-perfil {
+    display: flex;
+    justify-content: center;
     width: 350px;
     height: 350px;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
@@ -93,6 +102,7 @@ h1 {
 .cabecalho-sub-titulo {
     font-size: 1.5rem;
     color: var(--claro);
+    text-align: center;
 }
 
 

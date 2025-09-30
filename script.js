@@ -3,7 +3,7 @@ function enviarWhatsapp (event) {
 
 const nome = document.getElementById('nome').value;
 const mensagem = document.getElementById('mensagem').value;
-const telefone = '5585992802609';
+const telefone = '5585987261108';
 
 const texto = `Olá! Me chamo ${nome}, ${mensagem}`
 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Rodrigues | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a class="menu-link" href="#inicio">Início</a></li>
+            <li><a class="menu-link" href="#sobre">Sobre</a></li>
+            <li><a class="menu-link" href="#projetos">Projetos</a></li>
+            <li><a class="menu-link" href="#contatos">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio">
+
+        <div class="container-principal">
+            <div class="cabecalho">
+                <img class="foto-perfil" src="./img/perfil.jpeg" alt="foto perfil Francisco">
+                <div class="div-main">
+                    <h1>Francisco Rodrigues</h1>
+                    <p class="cabecalho-sub-titulo">Analyst System & Product Owner</p>
+                </div>
+
+                <div class="container-tecnologias">
+                    <img class="logo-tecnologia" src="./img/React.webp" alt="react">
+                    <img class="logo-tecnologia" src="./img/node-js.png" alt="Node.js">
+                    <img class="logo-tecnologia" src="./img/figma-logo.webp" alt="figma">
+                    <img class="logo-tecnologia" src="./img/git.png" alt="Git">
+                    <img class="logo-tecnologia" src="./img/github.png" alt="Github">
+                    <img class="logo-tecnologia" src="./img/python.png" alt="Python">
+                    <img class="logo-tecnologia" src="./img/linux-logo.png" alt="Linux">
+                    <img class="logo-tecnologia" src="./img/docker-logo.png" alt="docker">
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Oi, eu sou o Francisco José Rodrigues Lins, mas pode me chamar de Franzé. 🚀
+                Sou apaixonado por tecnologia e atualmente atuo como Analista de Sistemas, cuidando de suporte, redes e sistemas no varejo. Nos últimos anos, mergulhei de vez no desenvolvimento web, onde encontrei o equilíbrio perfeito entre lógica e criatividade.
+            </p>
+                
+            <p class="sobre-paragrafo">Tenho experiência prática em front-end com React, HTML, CSS, SCSS e Bootstrap, além de trabalhar com back-end em Node.js/NestJS e bancos de dados como MariaDB, MySQL e Oracle PL/SQL. Já participei de projetos que vão desde sites institucionais responsivos até sistemas de agendamento de exames ocupacionais com painel administrativo completo.</p>
+            
+            <p class="sobre-paragrafo">Além da parte técnica, curto bastante organizar processos, versionamento no GitHub e boas práticas de desenvolvimento em equipe — porque sei que tecnologia boa só funciona bem quando as pessoas também funcionam em sintonia.</p>
+            
+            <p class="sobre-paragrafo">Hoje, meu foco é evoluir como desenvolvedor fullstack, transformar ideias em soluções reais e, claro, continuar crescendo com cada novo desafio que aparece no caminho.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/01.png" alt="Projeto 1">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Sistema de marcação de exames</h3>
+                    <p class="paragrafo-projetos">Sistema criado para realizar agendamentos online, gerenciar exames marcados, realizar pagamentos e fornecer relatórios de desempenho.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/06.png" alt="Projeto 4">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Landing Page</h3>
+                    <p class="paragrafo-projetos">Landing Page para uma empresa de consultoria e softhouse. Landing Page criada para atrair novos clientes e divulgar soluções tecnologicas para otimizar as rotinas administrativas do varejo.</p>
+                </div>
+            </div>
+
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/03.jpeg" alt="Projeto 3">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site institucional Medeiros Supermercado</h3>
+                    <p class="paragrafo-projetos">Site institucional que serve para falar sobre nossas lojas, divulgar ações, vagas de emprego, promoções, localização das lojas e etc.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/05.png" alt="Projeto 4">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site institucional (Educacional)</h3>
+                    <p class="paragrafo-projetos">Site institucional da Hashtag treinamentos. Primeiro projeto feito na trajetória de Desenvolvedor. Cópia do site da plataforma.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projeto-imagem" src="./img/02.png" alt="Projeto 2">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">E-commerce Digital Collage (Educacional)</h3>
+                    <p class="paragrafo-projetos">Site de E-commerce Digital Collage, uma loja virtual que vende uma variedade de produtos.</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="contatos" id="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsapp(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-form">Enviar</button>
+        </form>
+    </section>
+
+   <script src="./script.js"></script>
+</body>
+</html>

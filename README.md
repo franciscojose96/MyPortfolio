@@ -27,7 +27,15 @@ O texto do site fica todo em `src/data/`. Para mudar o conteúdo, não é precis
 1. Abra `src/data/projects.js`.
 2. Copie um dos objetos do array `projects` e cole onde quiser que ele apareça.
 3. Ajuste os campos. O `stage` pode ser `production`, `launch` ou `development`.
-4. Para mostrar uma tela real, coloque a imagem em `public/img/` e preencha `image: './img/nome.png'`.
+4. Landing page: preencha `url: 'https://...'`. O botão "Conhecer o produto" aparece sozinho.
+5. Telas do sistema: coloque as imagens em `public/img/produtos/` e liste em `images`:
+   ```js
+   images: [
+     { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do Medflux' },
+     { src: './img/produtos/medflux-painel.png', alt: 'Painel administrativo do Medflux' },
+   ],
+   ```
+   A primeira imagem fica em destaque e as outras viram miniaturas clicáveis.
 
 O produto aparece automaticamente no hero e na seção de produtos.
 

@@ -1,9 +1,10 @@
 import { motion } from 'motion/react'
 import StageTrack from './StageTrack.jsx'
+import ProductGallery from './ProductGallery.jsx'
 import { inView } from '../motion.js'
 
 export default function ProductCard({ project }) {
-  const { id, name, segment, tagline, description, highlights, role, accent, image, url, stage, stageNote } =
+  const { id, name, segment, tagline, description, highlights, role, accent, images, url, stage, stageNote } =
     project
 
   return (
@@ -15,14 +16,13 @@ export default function ProductCard({ project }) {
         <p className="product-desc">{description}</p>
         <StageTrack stage={stage} note={stageNote} />
         {url && (
-          <a className="product-link" href={url} target="_blank" rel="noreferrer">
-            Visitar o site do {name}
+          <a className="btn product-cta" href={url} target="_blank" rel="noreferrer">
+            Conhecer o {name}
           </a>
         )}
       </div>
 
       <div className="product-side">
-        {image && <img className="product-image" src={image} alt={`Tela do ${name}`} loading="lazy" />}
         <div className="product-block">
           <h4>O produto</h4>
           <ul>
@@ -40,6 +40,8 @@ export default function ProductCard({ project }) {
           </ul>
         </div>
       </div>
+
+      <ProductGallery images={images} name={name} />
     </motion.article>
   )
 }

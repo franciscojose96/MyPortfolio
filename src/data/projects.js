@@ -15,13 +15,18 @@
  *  highlights  lista de pontos verdadeiros sobre o produto (sem inventar recursos)
  *  role        lista do que você faz no produto
  *  accent      cor de destaque do produto (hex)
- *  image       (opcional) caminho de uma captura real, ex.: './img/medflux.png'
- *  url         (opcional) link para o site do produto
+ *  url         (opcional) link da landing page do produto. Vazio = botão não aparece.
+ *  images      (opcional) capturas reais do sistema. Coloque os arquivos em
+ *              public/img/produtos/ e liste assim:
+ *                images: [
+ *                  { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do Medflux' },
+ *                ]
+ *              A primeira imagem aparece em destaque; as demais viram miniaturas.
  */
 export const projects = [
   {
-    id: 'mesa-digital',
-    name: 'Mesa Digital',
+    id: 'meza-digital',
+    name: 'Meza Digital',
     stage: 'production',
     stageNote: 'Com clientes usando a plataforma',
     segment: 'Gestão para restaurantes',
@@ -40,6 +45,8 @@ export const projects = [
       'Relacionamento com clientes e implantação',
     ],
     accent: '#f59e3b',
+    url: '', // ex.: 'https://www.seuproduto.com.br'
+    images: [],
   },
   {
     id: 'medflux',
@@ -62,6 +69,8 @@ export const projects = [
       'Implantação nos clientes',
     ],
     accent: '#2dd4bf',
+    url: '', // ex.: 'https://www.seuproduto.com.br'
+    images: [],
   },
   {
     id: 'movehub',
@@ -83,6 +92,8 @@ export const projects = [
       'Definição da experiência do personal e do aluno',
     ],
     accent: '#a78bfa',
+    url: '', // ex.: 'https://www.seuproduto.com.br'
+    images: [],
   },
 ]
 

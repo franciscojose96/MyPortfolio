@@ -31,8 +31,8 @@ O texto do site fica todo em `src/data/`. Para mudar o conteúdo, não é precis
 5. Telas do sistema: coloque as imagens em `public/img/produtos/` e liste em `images`:
    ```js
    images: [
-     { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do Medflux' },
-     { src: './img/produtos/medflux-painel.png', alt: 'Painel administrativo do Medflux' },
+     { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do MedFlux' },
+     { src: './img/produtos/medflux-painel.png', alt: 'Painel administrativo do MedFlux' },
    ],
    ```
    A primeira imagem fica em destaque e as outras viram miniaturas clicáveis.

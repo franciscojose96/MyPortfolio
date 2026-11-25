@@ -7,7 +7,7 @@ export const profile = {
     'Sou Analista de Sistemas na Suri by TOTVS e construo produtos digitais. Trabalho na ponte entre tecnologia e negócio: sistemas, integrações, implantação e, cada vez mais, Inteligência Artificial.',
   about: [
     'Minha base é o varejo. Conheço por dentro ERPs, sistemas de gestão, integrações e a rotina operacional de quem usa o software, do supermercado ao restaurante.',
-    'Fora do trabalho de análise e consultoria, construo produtos próprios: do código à homologação, da conversa com o cliente à implantação. O Meza Digital já está em produção, o Medflux se prepara para o lançamento e o MoveHub está em desenvolvimento.',
+    'Fora do trabalho de análise e consultoria, construo produtos próprios: do código à homologação, da conversa com o cliente à implantação. O Meza Digital já está em produção, o MedFlux se prepara para o lançamento e o MoveHub está em desenvolvimento.',
   ],
   ai: {
     title: 'IA no meu jeito de trabalhar',
@@ -21,7 +21,7 @@ export const profile = {
     ],
   },
   contact: {
-    whatsapp: '5585987261108',
+    whatsapp: '5585992802609',
     github: 'https://github.com/franciscojose96',
   },
 }

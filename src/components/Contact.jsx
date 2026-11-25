@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="contact-text">
           <h2>Vamos conversar</h2>
           <p>
-            Para oportunidades, parcerias ou para conhecer o Meza Digital, o Medflux ou o MoveHub. A
+            Para oportunidades, parcerias ou para conhecer o Meza Digital, o MedFlux ou o MoveHub. A
             mensagem abre direto no meu WhatsApp.
           </p>
           <a className="contact-github" href={profile.contact.github} target="_blank" rel="noreferrer">

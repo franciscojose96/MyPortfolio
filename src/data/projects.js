@@ -19,7 +19,7 @@
  *  images      (opcional) capturas reais do sistema. Coloque os arquivos em
  *              public/img/produtos/ e liste assim:
  *                images: [
- *                  { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do Medflux' },
+ *                  { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do MedFlux' },
  *                ]
  *              A primeira imagem aparece em destaque; as demais viram miniaturas.
  */
@@ -45,12 +45,12 @@ export const projects = [
       'Relacionamento com clientes e implantação',
     ],
     accent: '#f59e3b',
-    url: '', // ex.: 'https://www.seuproduto.com.br'
+    url: 'https://mezadigital.com.br',
     images: [],
   },
   {
     id: 'medflux',
-    name: 'Medflux',
+    name: 'MedFlux',
     stage: 'launch',
     stageNote: 'Lançamento comercial previsto para 2026',
     segment: 'Saúde ocupacional',
@@ -58,19 +58,23 @@ export const projects = [
     description:
       'Plataforma para organizar agendamentos e a operação de exames ocupacionais. Nasceu do EMMA, sistema que desenvolvi no início da carreira, e foi reformulada a fundo, com a estrutura reconstruída, para virar um produto mais completo e pronto para o mercado.',
     highlights: [
-      'Organização dos agendamentos de exames ocupacionais',
-      'Processos operacionais da clínica em um só lugar',
-      'Estrutura reconstruída para atender clínicas e empresas',
+      'Agendamento de exames por empresa ou pessoa física, com pagamento por PIX ou no balcão',
+      'Fila de atendimento com retirada de senha normal e prioritária',
+      'Dashboard com indicadores de atendimento, financeiro e desempenho, com exportação em PDF e Excel',
     ],
     role: [
-      'Criação do produto, do EMMA ao Medflux',
+      'Criação do produto, do EMMA ao MedFlux',
       'Reformulação da arquitetura e desenvolvimento',
       'Testes e homologação para o lançamento',
       'Implantação nos clientes',
     ],
     accent: '#2dd4bf',
     url: '', // ex.: 'https://www.seuproduto.com.br'
-    images: [],
+    images: [
+      { src: './img/produtos/medflux-dashboard.png', alt: 'Dashboard do MedFlux com indicadores de atendimento e financeiro' },
+      { src: './img/produtos/medflux-novo-agendamento.png', alt: 'Etapa de pagamento no novo agendamento do MedFlux' },
+      { src: './img/produtos/medflux-totem-senhas.png', alt: 'Totem do MedFlux para retirada de senha normal ou prioritária' },
+    ],
   },
   {
     id: 'movehub',
@@ -105,7 +109,7 @@ export const earlierWork = [
   {
     title: 'EMMA',
     description:
-      'Sistema de agendamento de exames ocupacionais com pagamentos e relatórios. Foi o ponto de partida do Medflux.',
+      'Sistema de agendamento de exames ocupacionais com pagamentos e relatórios. Foi o ponto de partida do MedFlux.',
     image: './img/01.png',
   },
   {

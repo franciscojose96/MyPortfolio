@@ -12,7 +12,7 @@ export const profile = {
   ai: {
     title: 'IA no meu jeito de trabalhar',
     text:
-      'Uso ferramentas de IA no dia a dia para desenvolver, organizar projetos e analisar problemas com mais rapidez. Estou aprofundando o estudo na área e planejo cursar uma pós-graduação em Inteligência Artificial.',
+      'Uso ferramentas de IA no dia a dia para desenvolver, organizar projetos e analisar problemas com mais rapidez. Sigo fazendo cursos na área para aprofundar esse conhecimento e aplicar IA de forma cada vez mais prática nos produtos e no trabalho.',
     uses: [
       'Desenvolvimento de software com apoio de IA',
       'Organização e planejamento de projetos',

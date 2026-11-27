@@ -35,7 +35,7 @@ O texto do site fica todo em `src/data/`. Para mudar o conteúdo, não é precis
      { src: './img/produtos/medflux-painel.png', alt: 'Painel administrativo do MedFlux' },
    ],
    ```
-   A primeira imagem fica em destaque e as outras viram miniaturas clicáveis.
+   As imagens aparecem num carrossel. Para prints de celular, adicione `device: 'phone'` à imagem e ela aparece numa moldura de celular.
 
 O produto aparece automaticamente no hero e na seção de produtos.
 

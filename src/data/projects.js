@@ -21,7 +21,9 @@
  *                images: [
  *                  { src: './img/produtos/medflux-agenda.png', alt: 'Agenda de exames do MedFlux' },
  *                ]
- *              A primeira imagem aparece em destaque; as demais viram miniaturas.
+ *              As imagens aparecem num carrossel. Para prints de celular, use
+ *              device: 'phone' para mostrar a tela numa moldura de celular:
+ *                { src: './img/produtos/movehub-app.png', alt: '...', device: 'phone' }
  */
 export const projects = [
   {
@@ -36,7 +38,8 @@ export const projects = [
     highlights: [
       'Produto comercial em operação, com clientes ativos',
       'Integração com iFood e 99',
-      'Evolução contínua a partir do uso real dos clientes',
+      'Cardápio digital com pedidos enviados direto para o WhatsApp do restaurante',
+      'Página de links para a bio do Instagram, com a identidade visual da marca',
     ],
     role: [
       'Sócio da empresa',
@@ -46,7 +49,14 @@ export const projects = [
     ],
     accent: '#f59e3b',
     url: 'https://mezadigital.com.br',
-    images: [],
+    images: [
+      { src: './img/produtos/meza-produtos.png', alt: 'Gestão de produtos do cardápio no Meza Digital' },
+      { src: './img/produtos/meza-categorias.png', alt: 'Organização das categorias do cardápio no Meza Digital' },
+      { src: './img/produtos/meza-resumo.png', alt: 'Resumo de visitas ao cardápio e pedidos enviados ao WhatsApp' },
+      { src: './img/produtos/meza-pagina-de-links.png', alt: 'Página de links para a bio do Instagram no Meza Digital' },
+      { src: './img/produtos/meza-identidade-visual.png', alt: 'Configuração de logo, capa e cores do cardápio' },
+      { src: './img/produtos/meza-configuracoes.png', alt: 'Configuração do WhatsApp que recebe os pedidos' },
+    ],
   },
   {
     id: 'medflux',
@@ -86,9 +96,10 @@ export const projects = [
     description:
       'Plataforma para personal trainers gerenciarem seus alunos, acompanharem os treinos e organizarem a rotina profissional. O aluno tem a sua própria experiência no mesmo ambiente.',
     highlights: [
-      'Gestão de alunos para o personal trainer',
-      'Acompanhamento de treinos',
-      'Experiência pensada para o profissional e para o aluno',
+      'Carteira de alunos com metas, treino atual e adesão mensal',
+      'Montagem de treinos e agenda dos próximos acompanhamentos',
+      'Evolução de cargas, recordes e marcos de consistência',
+      'Versão web e celular, pensada para o personal e para o aluno',
     ],
     role: [
       'Concepção e visão de produto',
@@ -96,8 +107,17 @@ export const projects = [
       'Definição da experiência do personal e do aluno',
     ],
     accent: '#a78bfa',
-    url: '', // ex.: 'https://www.seuproduto.com.br'
-    images: [],
+    url: 'https://movehub.com',
+    images: [
+      { src: './img/produtos/movehub-visao-geral.png', alt: 'Visão geral do personal no MoveHub' },
+      { src: './img/produtos/movehub-celular-visao-geral.png', alt: 'Visão geral do MoveHub no celular', device: 'phone' },
+      { src: './img/produtos/movehub-alunos.png', alt: 'Carteira de alunos com metas e adesão' },
+      { src: './img/produtos/movehub-celular-agenda.png', alt: 'Agenda do dia e adesão dos alunos no celular', device: 'phone' },
+      { src: './img/produtos/movehub-evolucao.png', alt: 'Evolução de cargas e recordes dos alunos' },
+      { src: './img/produtos/movehub-celular-treinos.png', alt: 'Treinos com conclusão média no celular', device: 'phone' },
+      { src: './img/produtos/movehub-login.png', alt: 'Tela de acesso do MoveHub' },
+      { src: './img/produtos/movehub-celular-login.png', alt: 'Tela de acesso do MoveHub no celular', device: 'phone' },
+    ],
   },
 ]
 

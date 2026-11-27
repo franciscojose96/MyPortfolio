@@ -1,47 +1,52 @@
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css/core'
 
-// Galeria de capturas reais do produto: imagem em destaque + miniaturas.
-// Clicar na imagem grande abre o arquivo em tamanho real em outra aba.
+// Carrossel com as telas reais do produto (Splide — splidejs.com).
+// Cada imagem pode ter device: 'phone' para aparecer numa moldura de celular.
+// Clicar numa imagem abre o arquivo em tamanho real em outra aba.
 export default function ProductGallery({ images, name }) {
-  const [active, setActive] = useState(0)
   if (!images?.length) return null
-  const current = images[active]
+
+  const options = {
+    type: images.length > 2 ? 'loop' : 'slide',
+    perPage: 2,
+    perMove: 1,
+    gap: '1rem',
+    height: '300px',
+    arrows: images.length > 2,
+    pagination: images.length > 2,
+    breakpoints: {
+      760: { perPage: 1, height: '260px', arrows: images.length > 1, pagination: images.length > 1 },
+    },
+    i18n: {
+      prev: 'Imagem anterior',
+      next: 'Próxima imagem',
+      slideX: 'Ir para a imagem %s',
+      pageX: 'Ir para a página %s',
+      carousel: 'carrossel',
+      slide: 'imagem',
+      select: 'Selecione uma imagem',
+      slideLabel: '%s de %s',
+    },
+  }
 
   return (
     <div className="gallery">
-      <a className="gallery-main" href={current.src} target="_blank" rel="noreferrer" title="Abrir em tamanho real">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.img
-            key={current.src}
-            src={current.src}
-            alt={current.alt || `Tela do ${name}`}
-            loading="lazy"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          />
-        </AnimatePresence>
-      </a>
-
-      {images.length > 1 && (
-        <ul className="gallery-thumbs" aria-label={`Telas do ${name}`}>
-          {images.map((img, i) => (
-            <li key={img.src}>
-              <button
-                type="button"
-                className={i === active ? 'is-active' : ''}
-                aria-pressed={i === active}
-                aria-label={img.alt || `Tela ${i + 1} do ${name}`}
-                onClick={() => setActive(i)}
-              >
-                <img src={img.src} alt="" loading="lazy" />
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+      <Splide options={options} aria-label={`Telas do ${name}`}>
+        {images.map((img) => (
+          <SplideSlide key={img.src}>
+            <a
+              className={`shot ${img.device === 'phone' ? 'shot-phone' : 'shot-desktop'}`}
+              href={img.src}
+              target="_blank"
+              rel="noreferrer"
+              title="Abrir em tamanho real"
+            >
+              <img src={img.src} alt={img.alt || `Tela do ${name}`} loading="lazy" />
+            </a>
+          </SplideSlide>
+        ))}
+      </Splide>
     </div>
   )
 }

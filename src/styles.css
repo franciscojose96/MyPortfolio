@@ -213,7 +213,7 @@ h2 {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
 }
@@ -255,7 +255,7 @@ h2 {
 
 .hero-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 1rem;
   margin-top: clamp(3rem, 6vw, 5rem);
 }
@@ -351,7 +351,7 @@ h2 {
 }
 .product {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3.5rem);
   padding: clamp(1.5rem, 4vw, 3rem);
   border-radius: calc(var(--radius) + 6px);
@@ -391,8 +391,12 @@ h2 {
 /* Galeria de telas reais: ocupa a largura toda do card */
 .gallery {
   grid-column: 1 / -1;
-  display: grid;
-  gap: 0.75rem;
+  min-width: 0;
+  max-width: 100%;
+}
+.gallery .splide {
+  width: 100%;
+  max-width: 100%;
 }
 /* Slide: fundo neutro com brilho da cor do produto; a tela fica inteira, sem corte */
 .shot {
@@ -550,7 +554,7 @@ h2 {
 
 @media (max-width: 900px) {
   .product {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -561,7 +565,7 @@ h2 {
 .stage-track ol {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .stage-track li {
   position: relative;
@@ -617,7 +621,7 @@ h2 {
 /* ---------- Sobre ---------- */
 .about {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 2rem;
 }
 .about-text {
@@ -631,14 +635,14 @@ h2 {
 }
 @media (max-width: 760px) {
   .about {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 /* ---------- IA ---------- */
 .ai-band {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
   padding: clamp(1.75rem, 4vw, 3rem);
@@ -656,14 +660,14 @@ h2 {
 }
 @media (max-width: 760px) {
   .ai-band {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 /* ---------- Experiência ---------- */
 .exp-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1.5rem;
 }
 .exp {
@@ -700,7 +704,7 @@ h2 {
 /* ---------- Conhecimentos ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 2rem;
 }
 .skill-group h3 {
@@ -726,12 +730,12 @@ h2 {
 /* ---------- Trabalhos anteriores ---------- */
 .earlier-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 1.25rem;
 }
 .earlier {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 140px minmax(0, 1fr);
   gap: 1.25rem;
   align-items: center;
   padding: 1rem;
@@ -758,7 +762,7 @@ h2 {
 /* ---------- Contato ---------- */
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
 }
 .contact-text p {
@@ -805,7 +809,7 @@ h2 {
 }
 @media (max-width: 760px) {
   .contact {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -829,5 +833,31 @@ h2 {
   }
   .btn {
     transition: none;
+  }
+}
+
+/* ---------- Ajustes para telas pequenas ---------- */
+@media (max-width: 480px) {
+  .product {
+    padding: 1.25rem;
+  }
+  .product-block {
+    padding: 1rem 1.1rem;
+  }
+  .stage-track li {
+    padding-right: 0.4rem;
+  }
+  .earlier {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+  .earlier img {
+    width: 96px;
+  }
+  .contact-form {
+    padding: 1.25rem;
+  }
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.25rem;
   }
 }
